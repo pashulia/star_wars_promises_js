@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Подключаем css-фреймворк Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <!-- Библиотека иконок Fontawesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <!-- Наши стили -->
+  <link rel="stylesheet" href="stylesheets/style.css">
+
+  <!-- Библотека методов для получения данных про Star Wars -->
+  <script defer src="lib/star-wars.js"></script>
+  <!-- Скрипт, который вам предстоит написать! -->
+  <script defer src="scripts/search.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>STAR WARS</title>
+</head>
+
+<body>
+  <header>
+    <div class="column is-3">
+      <h1 class="title">STAR WARS</h1>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="column is-half is-offset-2">
+        <h3 class="text-left text-3xl pb-6">Search By Name</h3>
+        <div id="byQueryBlock" class="search">
+          <select id="querySelector" class="mr-2">
+            <option value="people">people</option>
+            <option value="planets">planets</option>
+            <option value="species">species</option>
+          </select>
+          <input id="input1" class="is-large input" type="text" placeholder="Search...">
+          <button id="byQueryBtn" class="is-large button">Search</button>
+        </div>
+    </section>
+
+    <section>
+      <div class="column is-half is-offset-2">
+        <h3 class="text-left text-3xl pb-6">Search By ID</h3>
+        <div id="byQueryBlock" class="search">
+          <select id="IDSelector" class="mr-2">
+            <option value="people">people</option>
+            <option value="planets">planets</option>
+            <option value="species">species</option>
+            <option value="films">films</option>
+          </select>
+          <input id="input2" class="is-large input" type="text" placeholder="Search...">
+          <button id="byQueryBtn2" class="is-large button">Get By iD</button>
+        </div>
+    </section>
+
+    <div class="spinnerContainer">
+      <img class="spinner" src="images/dv.png" alt="">
+    </div>
+
+    <section class="section">
+
+      <div id="result-container" class="column is-5 is-offset-2">
+        <article class="message is-dark">
+          <div class="message-header">
+            <p id="header">Primary</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div id="content" class="message-body">
+            Nothing found :(
+          </div>
+        </article>
+      </div>
+
+    </section>
+  </main>
+</body>
+
+</html>
