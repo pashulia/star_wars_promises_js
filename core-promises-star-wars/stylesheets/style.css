@@ -13,7 +13,8 @@ body {
   min-height: 100vh;
   max-height: 100vh;
   overflow-y: hidden;
-  background-image: url(../images/at-st.jpg);
+  background: url(../images/at-st.jpg) no-repeat;
+  background-size: 100% 100%;
 }
 
 ul>li>ul>li {
